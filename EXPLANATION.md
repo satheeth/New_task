@@ -28,7 +28,7 @@ In `FormBuilder.jsx`, the `moveField` function accepts the `index` of the curren
   *Solution*: Utilized `Array.prototype.map` to iterate over the schema and reconstruct objects. When the targeted `field.id` matches, we explicitly clone the `options` array, replace the targeted index, and return a fresh object without mutating the original state.
 - **Challenge: Consistent Layout Geometry**
   Ensuring inputs didn't stretch awkwardly across wide screens while remaining responsive.
-  *Solution*: Enforced centralized, standardized Tailwind width classes (e.g., `w-1/2`) combined with flexbox layouts to ensure identical rendering logic between the Builder panel and Preview panel.
+  *Solution*: Enforced centralized, standardized Tailwind width classes combined with flexbox layouts to ensure identical rendering logic between the Builder panel and Preview panel.
 
 ## 4. How you would scale this for 100+ fields
 
