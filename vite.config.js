@@ -3,10 +3,11 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/react-dynamic-form-builder/',
+export default defineConfig(({ command }) => ({
+  // Use '/' for local development, and '/your-repo-name/' for GitHub Pages
+  base: command === 'serve' ? '/' : '/react-dynamic-form-builder/',
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-})
+}))
