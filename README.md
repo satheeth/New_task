@@ -1,18 +1,55 @@
-# React + Vite
+# 📝 React Dynamic Form Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and highly interactive form builder application built with **React**, **Vite**, and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **🎨 Intuitive UI/UX:** A split-pane design featuring a Form Builder on the left and a Real-time Live Preview on the right.
+- **⚙️ 7 Field Types:** Support for Text, Number, Dropdown, Email, Long Text (Textarea), Checkbox, and Radio button fields.
+- **🔄 Live Preview:** Forms render instantly as you add, remove, or modify fields.
+- **📝 Form Customization:** Customize field labels, placeholders, requirement constraints, and multi-choice options.
+- **↕️ Field Reordering:** Easily move fields up or down the form list to organize your layout.
+- **💾 LocalStorage Persistence:** Your form schema is automatically saved and persists across page reloads.
+- **💻 Terminal-Style JSON Export:** Submit your live preview form to view the output data in a sleek, IDE-style JSON modal. Quick-copy functionality included!
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Prerequisites
 
-Note: This will impact Vite dev & build performances.
+Make sure you have Node.js installed on your machine.
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository (or download the source code).
+2. Open a terminal in the project directory.
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the provided `localhost` URL in your browser.
+
+## 🏗️ Architecture & State Management
+
+- **Centralized State:** The form structure (`schema`) is managed in the parent `App.jsx` and passed down to `FormBuilder` and `LivePreview`.
+- **Component Modularity:** UI is split cleanly into logical components (`FormBuilder.jsx`, `LivePreview.jsx`, `Icons.jsx`) for maintainability.
+- **Immutable Updates:** Complex nested states (like options within a dropdown field) are updated using pure functions to ensure React's rendering lifecycle functions perfectly.
+
+For a more in-depth look at architectural decisions and scaling considerations, check out `EXPLANATION.md`.
+
+## 🛠️ Built With
+
+- React - UI Library
+- Vite - Frontend Tooling / Bundler
+- Tailwind CSS - Utility-first CSS framework
+
+---
+
+*Designed and built to showcase clean UI patterns and robust React state management.*
