@@ -6,7 +6,9 @@ A highly interactive, responsive, and modern split-pane dynamic form builder app
 
 ## 📸 Preview
 
-![React Dynamic Form Builder Screenshot](./src/asset/screenshot.png)
+![React Dynamic Form Builder Screenshot](./src/assets/homepage.png)
+![React Dynamic Form Builder Screenshot](./src/assets/fieldaddedpage.png)
+![React Dynamic Form Builder Screenshot](./src/assets/Jsonoutput.png)
 
 ---
 
