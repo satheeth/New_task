@@ -4,7 +4,13 @@ A highly interactive, responsive, and modern split-pane dynamic form builder app
 
 ---
 
-## 🛠️ Proper Tech Stack
+## 📸 Preview
+
+![React Dynamic Form Builder Screenshot](./src/asset/screenshot.png)
+
+---
+
+## �️ Proper Tech Stack
 
 This project leverages modern, lightweight, and fast technologies to ensure an optimal developer and user experience without unnecessary bloat.
 
