@@ -2,23 +2,22 @@ import React from 'react';
 
 export default function LivePreview({ schema, setJsonResult }) {
 
-    // Form Submission
+    // Form Submission Handler
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the default browser page reload
         const formData = new FormData(e.target);
         const result = {};
-        for (let [key, value] of formData.entries()) {
-            if (result[key]) {
-                if (!Array.isArray(result[key])) {
-                    result[key] = [result[key]];
-                }
-                result[key].push(value);
+
+        // Iterate over the schema to correctly handle different field types, especially checkboxes
+        schema.forEach(field => {
+            const name = field.label;
+            if (field.type === 'checkbox') {
+                result[name] = formData.getAll(name); // .getAll() captures all values for multi-select checkboxes
             } else {
-                const allValues = formData.getAll(key);
-                result[key] = allValues.length > 1 ? allValues : value;
+                result[name] = formData.get(name); // .get() captures the single value for other inputs
             }
-        }
-        setJsonResult(result);
+        });
+        setJsonResult(result); // Pass the final JSON object to the parent component
     };
 
     return (

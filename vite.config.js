@@ -5,7 +5,7 @@ import babel from '@rolldown/plugin-babel'
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
   // Use '/' for local development, and '/your-repo-name/' for GitHub Pages
-  base: command === 'serve' ? '/' : '/react-dynamic-form-builder/',
+  base: command === 'serve' ? '/' : '/New_task/',
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
