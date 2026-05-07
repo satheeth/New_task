@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => ({
   // This is crucial for GitHub Pages deployment. It tells Vite that your
   // project will be served from the /New_task/ subdirectory.
-  base: command === 'serve' ? '/' : '/New_task/',
+  base: '/' ,
   plugins: [
     // The react plugin should be configured to handle all React-related transformations,
     // including the experimental React Compiler.
